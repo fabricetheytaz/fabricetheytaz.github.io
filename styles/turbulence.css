@@ -1,0 +1,12 @@
+
+body.noise
+	{
+	background-color: yellowgreen;
+	background-color: white;
+	background-image: url(../images/svg/turbulence.svg);
+	/*
+	background-blend-mode: darken;
+	background-blend-mode: luminosity;
+	*/
+	background-size: cover;
+	}
