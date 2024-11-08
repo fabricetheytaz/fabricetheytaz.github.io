@@ -10,7 +10,7 @@ body.under-construction-css
 
 body.under-construction-svg
 	{
-	background-color: white;
+	background-color: rgb(240, 240, 240);
 	background-image: url(../images/svg/under-construction.svg);
 	background-size: 10em 5em;
 	background-repeat: repeat-x;
