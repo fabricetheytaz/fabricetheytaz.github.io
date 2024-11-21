@@ -1,70 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-	<title>JEU</title>
-</head>
-<body>
-
-<!--
-à essayer
-https://codepen.io/Ryuno-Ki/pen/aNVKNj
--->
-
-<svg id="island" width="600" height="600">
-	<!--
-	<filter id="water" x="0" y="0" width="100%" height="100%">
-		<feTurbulence numOctaves="4">
-			<animate attributeName="baseFrequency" keyTimes="0; 1" values="0.03; 0.06;" dur="30s" repeatCount="indefinite" />
-		</feTurbulence>
-		<feDisplacementMap scale="20" in="SourceGraphic" />
-	</filter>
-	-->
-	<rect x="0" y="0" width="600" height="600" fill="lightblue" />
-</svg>
 
 <script type="module">
 
-import { sequence } from "../scripts/lib/array.mjs";
-import { toRadian, toXY } from "../scripts/lib/geometry.mjs";
-import { Direction } from "../scripts/lib/map.mjs";
-
-function polygon(count, r)
-	{
-	return sequence(count)    // Créer une suite 0, 1,... (sommets)
-		.map(toRadian(count)) // Convertir en angle en radians
-		.map(toXY(r));        // Convertir en coordonnées X, Y
-	}
-
-function d(points)
-	{
-	let d = "";
-
-	let first = points.shift();
-
-	d += `M ${first.x + 100} ${first.y + 100} `;
-
-	points.forEach(point =>
-		{
-		d += `L ${point.x + 100} ${point.y + 100} `;
-		});
-
-	d += "Z";
-
-	return d;
-	}
-
-let svg = document.querySelector("#island");
-
-let hexagon = document.createElementNS("http://www.w3.org/2000/svg", "path");
-
-hexagon.setAttribute("d", d(polygon(6, 50)));
-hexagon.setAttribute("fill", "none");
-hexagon.setAttribute("stroke", "blue");
-
-svg.appendChild(hexagon);
-
-let direction = new Direction(3, 6);
+	let direction = new Direction(3, 6);
 console.log(direction.toString());
 direction.neighbor().forEach(neighbor =>
 	{
@@ -81,6 +18,3 @@ direction.neighbor().forEach(neighbor =>
 	(3, 7)
 */
 </script>
-
-</body>
-</html>
