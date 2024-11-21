@@ -27,6 +27,7 @@ https://codepen.io/Ryuno-Ki/pen/aNVKNj
 
 import { sequence } from "../scripts/lib/array.mjs";
 import { toRadian, toXY } from "../scripts/lib/geometry.mjs";
+import { Direction } from "../scripts/lib/map.mjs";
 
 function polygon(count, r)
 	{
@@ -63,6 +64,22 @@ hexagon.setAttribute("stroke", "blue");
 
 svg.appendChild(hexagon);
 
+let direction = new Direction(3, 6);
+console.log(direction.toString());
+direction.neighbor().forEach(neighbor =>
+	{
+	console.log(neighbor.toString());
+	});
+/*
+	(3, 6) game:68:9
+	
+	(4, 6) game:71:10
+	(4, 5) game:71:10
+	(3, 5) game:71:10
+	(2, 6) game:71:10
+	(2, 7) game:71:10
+	(3, 7)
+*/
 </script>
 
 </body>
