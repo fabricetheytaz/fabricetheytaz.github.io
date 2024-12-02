@@ -1,4 +1,5 @@
 
+/*
 body.under-construction-css
 	{
 	background-color: white;
@@ -7,8 +8,9 @@ body.under-construction-css
 	background-repeat: repeat-x;
 	padding-top: 5em;
 	}
+*/
 
-body.under-construction-svg
+body.under-construction
 	{
 	background-color: rgb(240, 240, 240);
 	background-image: url(../images/svg/under-construction.svg);
@@ -17,14 +19,14 @@ body.under-construction-svg
 	padding-top: 5em;
 	}
 
+/* https://codepen.io/yoksel/pen/BzZyBJ */
+/*
 body.sdfdsd
 	{
-	/* https://codepen.io/yoksel/pen/BzZyBJ */
 	background-color: #222222;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, 0) 50%);
 	background-size: 2em 2em;
-	/*
 	background-position: center center;
 	font: 1rem/1.4 Trebuchet MS, sans-serif;
-	*/
 	}
+*/
